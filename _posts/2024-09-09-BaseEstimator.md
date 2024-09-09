@@ -17,7 +17,7 @@ BaseEstimator는 사이킷런에서 모든 추정기(estimator)의 기반 클리
 - **get_params()** 메서드 제공: 추정기의 하이퍼파라미터를 딕셔너리로 반환
 - **set_params()** 메서드 제공: 주어진 하이퍼파라미터로 추정기의 속성을 설정
 
-
+## BaseEstimator 예시
 ```python
 from sklearn.base import BaseEstimator, ClassifierMixin
 import numpy as np
