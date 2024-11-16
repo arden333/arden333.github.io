@@ -33,7 +33,7 @@ funcName();
 
 
 ## 인수(argument)
-함수에 특정한 input을 전달할 수도 있다. 이 값을 인수(argument)라고 한다.
+함수에 특정한 input을 전달할 수도 있다. 이 값을 인수(argument)라고 한다. 인수는 숫자, 텍스트, 배열, 함수 등을 받을 수 있다.   
 누군가에게 인사를 하는 함수를 만들어보자.
 
 ```javascript
@@ -73,3 +73,56 @@ result = function(3,5)
 ```
 
 
+## 중첩 함수
+함수를 중첩할 경우에는 함수 내에서 중첩된 함수를 실행해줘야 한다. 중첩된 함수를 자식함수, 그것을 포괄하고 있는 함수를 부모함수라고 한다면 부모함수내에서 자식함수를 실행해줘야 한다는 의미이다.
+
+```javascript
+function BankRobbery() { //부모함수
+  const heroes = ['ironman', 'spiderman', 'thor']
+  function cryForHelp() { //자식함수
+    for (let hero of heroes) {
+      console.log(`PLEASE HELP US, ${hero.toUpperCase()}`)
+    }
+  }
+cryForHelp(); //자식함수 실행
+}
+```
+
+
+## 함수표현식(Function expression)
+함수를 다른 표현방식으로 정의할 수도 있다. 정의하는 구문은 달라도 실행하는 구문은 '함수명()'으로 동일하다.
+
+```javascript
+//기존방식
+function add(x,y){
+  return x+y;
+}
+
+//다른 방식
+const add = function (x,y){
+  return x+y;
+}
+```
+
+
+
+## 메서드와 함수의 차이
+모든 메서드는 함수이지만 모든 함수가 메서드인 것은 아니다. 메서드는 '.함수명()'의 형태이며 특정 객체에 종속되어 있다. 메서드는 객체에 속성으로 추가된 함수이다.
+
+간단한 수학계산식을 메서드로 만들어보자.
+```javascript
+myMath = {
+  PI: 3.14,
+  square: function(num) { // 줄여서 square(num)만 써도 됨
+    return num*num;
+  },
+  cube: function(num) {
+    return num**3;
+  }
+}
+
+//메서드 사용
+myMyth.PI //3.14
+myMyth.square(2) //4
+myMath.cube(2) //8
+```
