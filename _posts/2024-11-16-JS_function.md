@@ -126,3 +126,58 @@ myMyth.PI //3.14
 myMyth.square(2) //4
 myMath.cube(2) //8
 ```
+
+
+
+## 함수를 인수로 받는 메서드
+### map
+배열의 각 요소를 순회하며 함수를 실행한다. 함수를 먼저 정의한 후 인수에 그 함수를 입력할 수도 있디만 대부분의 경우에는 인수를 넣는 자리에서 바로 함수를 정의한다. 
+
+배열의 각 요소를 2배로 만들어보자.
+
+```javascript
+const numbers = [1,2,3,4,5]
+
+const doubles = numbers.map(function(num){
+  return num*2;
+}
+```
+
+
+## arrow function
+arrow function은 기존의 함수정의 구문을 좀 더 간결하게 작성하는 방식이다. 이는 꽤 최신기능으로, 인터넷 익스플로러에서는 지원하지 않는다. arrow function은 인수에 함수를 전달할 때 사용하면 구문이 간결해지기 때문에 유용하다.
+
+```javascript
+//기존방식
+const sum = function(x, y) {
+  return x+y;
+}
+
+//arrow function 방식
+const add = (x, y) => {
+  return x+y;
+}
+
+//인수가 1개일 경우는 괄호를 생략 가능
+const squre = x => {
+  return x*x;
+}
+
+//인수가 없을 경우는 빈 괄호 입력
+const rollDice = () => {
+  return Math.Floor(Math.random()*6) + 1;
+}
+
+//인수에 함수를 전달할 때 사용할 경우
+const goodMovies = movies.filter(m => m.scores > 90)
+```
+
+함수 정의를 더 짧은 구문으로 할 수도 있다. 중괄호{} 대신 소괄호()를 쓰고, return을 생략하는 것이다. 간단한 함수라면 한 줄의 코드로도 작성 가능하다. 단, 소괄호 안에는 하나의 표현식만 있어야 한다. 2개의 이상의 표현식이 있다면 어느 것을 반환해야할지 알 수 없기 때문이다.  
+   
+```javascript
+const rollDice = () => (
+  Math.Floor(Math.random()*6 + 1; // () 사용, return 생략
+)
+
+const add = (x,y) => a,b; () 생략, 한 줄로 작성
+```
