@@ -9,7 +9,7 @@ toc_sticky: true
 ---
 
 자바스크립트에서의 최신 기능들인 default parameter, spread, destructure에 대한 내용이다. 
-<br></br>
+<br/>
 ## default parameter
 함수에서 인수를 입력하지 않아도 기본값이 정해지도록 설정하는 것을 의미한다. 이 때 인수의 순서가 중요한데, 기본값이 있는 인수는 기본값이 없는 인수 다음에 반드시 와야한다. 
 
@@ -26,7 +26,7 @@ function greet(name, msg='Hi',) {
 }
 ```
 
-<br></br>
+<br/>
 ## 스프레드(spread)
 스프레드 연산자(...)를 이용해서 배열을 펼쳐 각 요소에 접근 가능하게 하는 것을 의미한다. 
 
@@ -47,7 +47,7 @@ console.log(...'hello')
 //h e l l o
 ```
 
-<br></br>
+<br/>
 스프레드는 객체를 변형시키지 않고 복사할 때 유용하게 사용된다. 특히 라이브러리나 react 도구로 작업할 때 유용하다. 스프레드를 이용해 객체를 쉽게 복사하고 합칠 수 있다.
 
 ```javascript
@@ -56,7 +56,7 @@ const dog = ['a','b','c']
 
 const catDog = [...cat, ...dog] /// ['A','B','C','a','b','c']
 ```
-<br></br>
+<br/>
 딕셔너리형 타입에도 스프레드를 활용해 복사하고 속성을 추가할 수 있다.
 
 ```javascript
@@ -70,10 +70,10 @@ const dataFromForm = {
 const newUserInfo = {...dataFromForm, id:123, isAdmin: false}
 ```
    
-<br></br>   
+<br/>
 ## 구조분해할당(destructure)
 구조분해할당은 객체, 배열의 요소를 분해해서 그 값들을 각각의 변수로 할당하는 표현식을 의미한다. 객체, 배열의 순서대로 변수가 할당된다.
-<br></br>
+<br/>
 ### 배열 분해
 ```javascript
 const raceResults = ['Emily', 'George', 'Suzy']
@@ -87,7 +87,7 @@ const [gold, ...everyoneElse] = raceResults;
 gold; // Emily
 everyoneElse; // ['Geroge', 'Suzy']
 ```
-<br></br>
+<br/>
 ### 객체 분해
 ```javascript
 const user = {
@@ -113,7 +113,7 @@ const {born: birthYear} = user;
 birthYear; // 1984
 ```
 
-<br></br>
+<br/>
 ### 매개변수 분해
 ```javascript
 const user = {
