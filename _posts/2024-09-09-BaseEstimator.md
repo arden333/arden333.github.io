@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Sklearn] BaseEstimator"
+title: "[sklearn] BaseEstimator"
 categories: "sklearn"
 tags: "BaseEstimator"
 
