@@ -2,7 +2,7 @@
 layout: single
 title: "[JS] 자바스크립트의 매개변수, 스프레드, 구조분해할당"
 categories: "JavaScript"
-tags: ["매개변수", "스프레드", "구조분해할당" "JavaScript"]
+tags: ["매개변수", "스프레드", "구조분해할당", "JavaScript"]
 
 toc: true
 toc_sticky: true
