@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[Sklearn] BaseEstimator"
-categories: "Sklearn"
+categories: "sklearn"
 tags: "BaseEstimator"
 
 toc: true
