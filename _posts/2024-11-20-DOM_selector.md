@@ -33,7 +33,7 @@ console.dir(document)
 이름에서 알 수 있듯이 id, tag name, class name으로 특성 요소를 찾아 반환하는 기능을 한다. 
 주의할 것은 tag name과 class name은 복수의 값을 찾기 때문에 element's', s가 붙는다. 
 
-```Javascript
+```javascript
 document.getElementId('name')
 
 document.getElementsTagName('p')
@@ -68,6 +68,6 @@ document.querySelector('span').innerText = 'disgusting'
    <br/>
 innerText, textContent, innerHTML의 차이점을 간략히 정리하자면 다음과 같다.
    
-<li> **innerText**: element 속성으로 사용자에게 보여지는 내용을 수정한다. html 코드에서 style=display:none을 하면 해당 내용이 숨겨진다.</li>
-<li> **textContext**: node 속성이며, style 태그와 상관없이 모든 내용이 보여진다. vs code를 통해 코드를 작성했다면 프로그램 내의 줄바꿈, 띄어쓰기까지 표시된다.</li>
-<li> **innerHTML**: html 태그를 읽고 수정할 수 있다. 수정내용을 "< i >abc< /i >"로 설정할 경우 innerText는 그대로 '< i >abc< /i >'를 반환하지만 innerHTML은 기울임체가 적용된 <i>abc</i>가 출력된다.</li>
+<li> <b>innerText</b>: element 속성으로 사용자에게 보여지는 내용을 수정한다. html 코드에서 style=display:none을 하면 해당 내용이 숨겨진다.</li>
+<li> <b>textContext</b>: node 속성이며, style 태그와 상관없이 모든 내용이 보여진다. vs code를 통해 코드를 작성했다면 프로그램 내의 줄바꿈, 띄어쓰기까지 표시된다.</li>
+<li> <b>innerHTML</b>: html 태그를 읽고 수정할 수 있다. 수정내용을 "< i >abc< /i >"로 설정할 경우 innerText는 그대로 '< i >abc< /i >'를 반환하지만 innerHTML은 기울임체가 적용된 <i>abc</i>가 출력된다.</li>
