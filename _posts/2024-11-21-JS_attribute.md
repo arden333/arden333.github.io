@@ -13,6 +13,7 @@ toc_sticky: true
 
    
 <br/>
+## 속성에 접근하기
 아래의 id와 속성을 가진 이미지가 있다고 하자.
 ```html
 <img id='banner' src='https://images.unsplash.com'>
@@ -35,11 +36,15 @@ image.getAttribute('id')
 image.getAttribute('src')
 ```
 <br/>
+## 속성값 설정하기
 setAttribute를 사용해서 속성값을 설정해줄 수도 있다. 인수는 (속성명, 값)으로 전달한다.
 ```javascript
 image.setAttribute('alt', 'Chikens')
+```
 
-//속성값 수정하는 방법
+<br/>
+## 속성값 수정하기
+```javascript
 image.setAttribute('alt', 'Monkeys')
 image.alt = 'Monkeys'
 ```
