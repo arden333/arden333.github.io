@@ -7,11 +7,7 @@ tags: ["DOM", "Selector", "Javascript"]
 toc: true
 toc_sticky: true
 ---
-
-DOM(Document Object Model)은 웹 페이지 요소를 다루는 핵심 기술이다. DOM과 Selector에 대해 알아보고 innerText, textContent, innerHTML의 차이점을 정리한다. 
-   
-   
-<br/>
+ 
 ## DOM
 DOM(Document Object Model, 문서객체모델)은 웹페이지를 구성하는 javascript 객체들의 집합이다. 
 하나의 페이지를 만들면 자동으로 생성되며, 페이지의 콘텐츠를 나타내는 객체 모음집과 같다. 
