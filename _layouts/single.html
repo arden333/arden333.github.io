@@ -64,10 +64,6 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
-
-<!-- 애드센스 수동광고(하단)-->
-{% include ad_post_updown.html %}
-
       
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
@@ -94,4 +90,8 @@ layout: default
   {% elsif page.id and page.related %}
     {% include page__related.html posts=site.posts %}
   {% endif %}
+
+  <!-- 애드센스 수동광고(하단)-->
+{% include ad_post_updown.html %}
+
 </div>
