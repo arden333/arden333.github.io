@@ -8,8 +8,6 @@ toc: true
 toc_sticky: true
 ---
 
-자바스크립트에서의 최신 기능들인 default parameter, spread, destructure에 대한 내용이다. 
-<br/>
 ## default parameter
 함수에서 인수를 입력하지 않아도 기본값이 정해지도록 설정하는 것을 의미한다. 이 때 인수의 순서가 중요한데, 기본값이 있는 인수는 기본값이 없는 인수 다음에 반드시 와야한다. 
 
