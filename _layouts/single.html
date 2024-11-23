@@ -78,13 +78,12 @@ layout: default
         {% include page__taxonomy.html %}
         {% include page__date.html %}
       </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
-      
       <div class="ad_down" display:block;>
       <!-- 애드센스 수동광고(하단)-->
       {% include ad_post_updown.html %}
       </div>
+      
+      {% if page.share %}{% include social-share.html %}{% endif %}
       
       {% include post_pagination.html %}
     </div>
