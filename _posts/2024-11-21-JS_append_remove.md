@@ -8,9 +8,6 @@ toc: true
 toc_sticky: true
 ---
 
-createElement, append, appendChild, prepend, remove, removeChild 메서드를 이용해서 요소를 삽입하고 삭제하는 방법을 정리한다.
-
-<br/>
 ## 새로운 요소(element) 만들기
 새로운 이미지를 만들어보자. 새로운 요소를 만들 때에는 태그이름을 인수로 전달해야 한다.
 
