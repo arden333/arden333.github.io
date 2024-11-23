@@ -58,6 +58,19 @@ p.prepend('I am the firtst stentence!') // 문단의 처음에 해당 문구가 
 <li>afterend</li>
 
 <br/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3082151336412907"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3082151336412907"
+     data-ad-slot="3525353674"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+
 ## 삭제하기
 특정 요소를 삭제하는 방법은 removeChild 메서드, remove 메서드를 사용하는 방법 2가지가 있다. 
 <br/>
