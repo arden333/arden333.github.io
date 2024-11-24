@@ -107,7 +107,7 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 </header>
 
 <!-- 애드센스 수동광고(상단)-->
-{% include ad_up.html %}     
+{% include 광고코드가 있는 파일명.html %}     
       
 <section class="page__content" itemprop="text">
 ```
@@ -136,7 +136,7 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
     <!-- 오른쪽 사이드바 광고 -->
     <nav class="toc-custom">
       {% if page.toc_ads %}
-        {% include ad_sidebar.html %}
+        {% include 광고코드가 있는 파일명.html %} //
 ```
 <br/>
 그리고 `_config.yml`의 default에 `toc_ads`와 'toc_sticky'를 추가해주면 된다.
