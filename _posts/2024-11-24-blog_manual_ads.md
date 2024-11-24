@@ -115,23 +115,44 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 이렇게 했을 때 포스팅의 상단에 광고는 성공적으로 잘 노출이 된다. 그러나 본문이 광고와 겹쳐 보이는 이슈가 있었다. 광고 단위를 만들 때 세로 높이를 조절해서 다시 광고단위를 만드는 것도 한 가지 방법일 것이다. 그러나 본문을 작성할 때 처음부터 바로 h태그를 사용하니 글자와 광고가 겹쳐보이는 문제가 해결되었다. 
 
 #### 포스팅 화면 내 사이드바 광고 게재
-사이드바 광고는 많은 시행착오를 겪었는데, [이 블로그](https://leechangyo.github.io/programming/2019/09/16/Github-Homepage-%EC%95%A0%EB%93%9C%EC%84%BC%EC%8A%A4-%EA%B4%91%EA%B3%A0-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/)에서 본 방법이 가장 깔끔하고 간편했다.
+사이드바 광고 게재는 특히 많은 시행착오를 겪었는데 [이 블로그](https://devinlife.com/howto%20github%20pages/adsense/)의 도움을 많이 받았다.
 
 <br/>
-사이드바 광고를 광고코드를 삽입하기 전에 영역을 먼저 확보해주어야 한다. 먼저, `_sass/minimal-mistakes/_sidebar.scss`에 들어가자.
-그리고 제일 아래에 다음의 코드를 추가하자.
-<br/>
-```css
-# 오른쪽 배너
-.fixed-bottom-right{
-  position: fixed; bottom:auto;top: 105px;left: 90%; margin-bottom: 0 auto;z-index: 900;
-}
-```
-<br/>
-코드 추가를 완료했다면, 이번에는 `_include/sidebar.html`에 들어가서 맨 아래에 다음의 코드를 입력해주면 된다.
+필자는 메인 페이지가 아닌 포스팅 화면에서만 사이드바 광고를 노출시키고 싶었다. 그래서 상단 광고와 마찬가지로 `single.html`에서 작업해주었다. 포스팅에서 사이드에 있는 목차를 방해하지 않으면서 함께 움직여야 한다. 따라서 콘텐츠 섹션의 코드를 다음과 같이 수정해주었다.
+
 <br/>
 ```html
-<div class="fixed-bottom-right">
-  {% include ad_sidebar.html %}
+<section class="page__content" itemprop="text">
+        {% if page.toc or page.toc_ads%}
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            <nav class="toc">
+              {% if page.toc %}
+                <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
+                {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+              {% endif %}
+            </nav>
+
+            
+    <!-- 오른쪽 사이드바 광고 -->
+    <nav class="toc-custom">
+      {% if page.toc_ads %}
+        {% include ad_sidebar.html %}
 ```
-<br/> 그러면 끝이다. 시간이 어느정도 지나면 광고가 노출될 것이다.
+<br/>
+그리고 `_config.yml`의 default에 `toc_ads`와 'toc_sticky'를 추가해주면 된다.
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc_ads: true
+      toc_sticky: true
