@@ -107,7 +107,7 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 </header>
 
 <!-- 애드센스 수동광고(상단)-->
-{% include ad_post_updown.html %}     
+{% include ad_up.html %}     
       
 <section class="page__content" itemprop="text">
 ```
@@ -132,6 +132,6 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 <br/>
 ```html
 <div class="fixed-bottom-right">
-  {% include ad_post_sidebar.html %}
+  {% include ad_sidebar.html %}
 ```
 <br/> 그러면 끝이다. 시간이 어느정도 지나면 광고가 노출될 것이다.
