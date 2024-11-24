@@ -103,14 +103,7 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 <br/>
 제목이 포함되는 header가 끝나는 부분과 본문인 page_content 섹션 사이에 수동광고 코드를 아래와 같이 넣어주었다. 
 <br/>
-```html
-</header>
-
-<!-- 애드센스 수동광고(상단)-->
-{% include 광고코드가 있는 파일명.html %}     
-      
-<section class="page__content" itemprop="text">
-```
+코드 이미지
 <br/> 
 이렇게 했을 때 포스팅의 상단에 광고는 성공적으로 잘 노출이 된다. 그러나 본문이 광고와 겹쳐 보이는 이슈가 있었다. 광고 단위를 만들 때 세로 높이를 조절해서 다시 광고단위를 만드는 것도 한 가지 방법일 것이다. 그러나 본문을 작성할 때 처음부터 바로 h태그를 사용하니 글자와 광고가 겹쳐보이는 문제가 해결되었다. 
 
@@ -121,23 +114,7 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 필자는 메인 페이지가 아닌 포스팅 화면에서만 사이드바 광고를 노출시키고 싶었다. 그래서 상단 광고와 마찬가지로 `single.html`에서 작업해주었다. 포스팅에서 사이드에 있는 목차를 방해하지 않으면서 함께 움직여야 한다. 따라서 콘텐츠 섹션의 코드를 다음과 같이 수정해주었다.
 
 <br/>
-```html
-<section class="page__content" itemprop="text">
-        {% if page.toc or page.toc_ads%}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              {% if page.toc %}
-                <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-                {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-              {% endif %}
-            </nav>
-
-            
-    <!-- 오른쪽 사이드바 광고 -->
-    <nav class="toc-custom">
-      {% if page.toc_ads %}
-        {% include 광고코드가 있는 파일명.html %} //
-```
+코드 이미지
 <br/>
 그리고 `_config.yml`의 default에 `toc_ads`와 'toc_sticky'를 추가해주면 된다.
 <br/>
