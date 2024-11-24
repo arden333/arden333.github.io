@@ -140,7 +140,8 @@ Minimal mistake 테마의 경우 head가 별도의 파일로 만들어져 있기
 ```
 <br/>
 그리고 `_config.yml`의 default에 `toc_ads`와 'toc_sticky'를 추가해주면 된다.
-
+<br/>
+```yaml
 # Defaults
 defaults:
   # _posts
@@ -156,3 +157,4 @@ defaults:
       related: true
       toc_ads: true
       toc_sticky: true
+```
