@@ -76,10 +76,12 @@ promise는 어떤 연산 또는 비동기 연산이 최종적으로 성공했는
 
 <br/>
 가짜로 요청하는 promise를 만들어보자. 아래의 코드는 난수가 0.7을 초과하면 url에 접속 성공, 그렇지 않으면 접속 실패를 1초 후에 반환한다. 
-promise는 다음의 3가지 상태를 가진다. 
+promise는 다음의 3가지 상태를 가진다.
+
 <li>pending: 이행하지도, 거부하지도 않은 초기 상태</li>
 <li>resolve: 연산이 성공적으로 완료됨</li>
 <li>reject: 연산이 실패함</li>
+<br/>
 아래의 코드에서처럼 resolve와 reject를 명시하지 않으면 fakeRequest는 계속 pending의 상태에 있다. 
 <br/>
 promise에 들어가는 콜백함수의 매개변수는 resolve, reject 2개가 필요하다. 연산이 성공했을 경우에 대한 것은 resolve, 연산이 실패했을 경우에 대한 것은 reject이다.
@@ -101,11 +103,11 @@ const fakeRequest = (url) => {
               
 ### then과 catch 메서드
 그렇게 만들어진 promise 객체는 비동기 작업이 완료된 이후에 다음 작업을 연결시켜 진행 할 수 있다.
-작업 결과에 따라 .then() 과 .catch() 메서드 연쇄을 통해 성공과 실패에 대한 후속 처리를 진행 할 수 있다.
+작업 결과에 따라 `.then()` 과 `.catch()` 메서드 연쇄을 통해 성공과 실패에 대한 후속 처리를 진행 할 수 있다.
 객체 내부에서 resolve 상태이면 then 메서드로 연결되고, reject 상태이면 catch 메서드로 연결된다.
 
 <br/>
-<img scr='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png' alt='promise'>
+<img src='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png' alt='promise'>
 <br/>
 <br/> 
 ```javascript
@@ -143,6 +145,6 @@ delayedColorChange('red', 1000)
 ```
 <br/>
 <br/>
-**참고**
+**참고**   
 [mdn - Promsie](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)   
 [자바스크립트 Promise 개념과 사용하는 이유](https://velog.io/@dongjun187/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-Promise-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
