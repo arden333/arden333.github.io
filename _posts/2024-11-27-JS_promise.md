@@ -144,6 +144,55 @@ delayedColorChange('red', 1000)
     .then(() => delayedColorChange('violet', 1000))
 ```
 <br/>
+
+## 비동기(async), 대기(await) 키워드
+### 비동기(async)
+async 키워드를 함수 앞에 선언하면 return을 사용하지 않아도 항상 promise를 반환한다. 즉, `return new Promise` 를 생략하고 간단한 코드를 작성할 수 있는 것이다.
+<br />
+```javascript
+const sing = async () => {
+  return 'LA LA LA'
+}
+```
+<br />
+위의 코드에서는 항상 resolve인 상태이다. async 키워드를 사용한 구문에서는 별도의 reject를 표현하는 구문이 없다. 대신, 오류를 발생하게 하면 reject 상태가 된다.
+
+<br/>
+```javascript
+const sing = async () => {
+  throw 'It's a problem.'
+  return 'LA LA LA'
+}
+
+sing
+  .then(data => {
+    console.log('resolved', data)
+  })
+  .catch(err => {
+    console.log('rejected', err)
+  })
+```
+<br/>
+throw를 통해 에러를 생성하면 연산이 완료된 상태, 거절된 상태에 대해 모두 `then, catch` 메서드를 통해 연쇄작업이 가능해진다. 
+
+### 대기(await)
+await는 promise가 값을 반환할 때까지 기다리기 위해 비동기 함수의 실행을 일시적으로 정지시킨다. await는 비동기 함수에서만 사용된다.
+
+<br/>
+배경색을 1초마다 무지개색으로 바꾸는 코드에 async와 await를 적용해보자.
+<br/>
+```javascript
+async function rainbow(){
+  await delayedColorChange('red', 1000)
+  await delayedColorChange('orange', 1000)
+  await delayedColorChange('yellow', 1000)
+  await delayedColorChange('green', 1000)
+  await delayedColorChange('blue', 1000)
+  await delayedColorChange('indigo', 1000)
+}
+```
+<br/>
+
 <br/>
 **참고**   
 [mdn - Promsie](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)   
