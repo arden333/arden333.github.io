@@ -30,6 +30,17 @@ github 블로그에 자동광고와 수동광고를 게재하는 방법에 대�
 <br>
 <img src="https://github.com/user-attachments/assets/0049d816-0143-40ac-bbd0-4b2d25e33d37" alt='블로그-포스팅화면-광고'>
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3082151336412907"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3082151336412907"
+     data-ad-slot="3525353674"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## 애드센스 광고 게재 방법
 ### 1. ad.txt 파일 만들기
