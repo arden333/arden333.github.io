@@ -90,7 +90,17 @@ pd.to_datetime(['1/2/2024', '1/3/2024'], format='%d/%m/%Y')
 pd.to_datetime(['1--2--2024', '1--3--2024'], format='%d--%m--%Y')
 ```
 <br />
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3082151336412907"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3082151336412907"
+     data-ad-slot="3525353674"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 ## Numpy
 Numpy를 활용해서 날짜 데이터의 array(배열)를 만들 수도 있다. 
 
