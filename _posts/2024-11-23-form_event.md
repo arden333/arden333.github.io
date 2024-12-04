@@ -23,6 +23,18 @@ toc_sticky: true
 위의 form은 제출 버튼을 누르는 순간 '/shelter'주소로 보내지며, 페이지 또한 '/shelter'로 이동한다. 
 <br/> 
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3082151336412907"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3082151336412907"
+     data-ad-slot="3525353674"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## preventDefault 메서드
 싱글 페이지로 앱을 구성하는 경우라면 페이지가 이동되어서는 안 된다. form을 제출하고 난 뒤에도 페이지의 이동 없이 한 페이지 내에 사용자가 머물러야 한다.
 이렇게 만드려면 form의 default값이 발동하지 않도록 막아야 한다. 이 때, preventDefault 메서드를 사용하면 된다.
