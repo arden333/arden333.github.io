@@ -65,7 +65,31 @@ idx.max() # Timestamp('2018-07-14 00:00:00')
 idx.min() # Timestamp('2018-07-08 00:00:00')
 ```
 <br />
+### pd.to_datetime 활용하기
+이번에는 Pandas의 to_datetime 메서드를 이용해 날짜 데이터를 생성해보자.
+<br />
+```python
+pd.to_datetime(['1/2/2024', '1/3/2024'])
+# DatetimeIndex(['2024-1-2', '2024-1-3'], dtype='datetime64[ns]', freq='D')
+```
+<br />
+위 코드에서 1월 2일인지, 2월 1일인지 Pandas는 어떻게 인식할까? DatetimeIndex를 보면 1월 2일, 즉 미국 기준으로 인식하고 있음을 알 수 있다. 
+유럽의 경우 '일/월/연도' 순으로 날짜를 작성한다. 그러면 Pandas에게 이를 인식할 수 있도록 알려줘야 한다.
+<br />
+```python
+pd.to_datetime(['1/2/2024', '1/3/2024'], format='%d/%m/%Y')
+# DatetimeIndex(['2024-2-1', '2024-3-1'], dtype='datetime64[ns]', freq='D')
+```
+<br />
+그러면 이번에는 2월 1일, 3월 1일로 인식한다.
 
+<br />
+데이터셋에서 날짜가 표시된 형식은 다를 수 있다. 2024년 1월 4일을 '2024-1-4'로 표기할 수도 있고, '2024--1--4'로 표기할 수도 있다. 이 때에도 format을 사용하면 된다.
+<br />
+```python
+pd.to_datetime(['1--2--2024', '1--3--2024'], format='%d--%m--%Y')
+```
+<br />
 
 ## Numpy
 Numpy를 활용해서 날짜 데이터의 array(배열)를 만들 수도 있다. 
