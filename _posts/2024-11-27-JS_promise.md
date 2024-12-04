@@ -69,6 +69,18 @@ delayedColorChange('red', 1000, () => {
 코드는 간결해졌지만 여전히 많이 중첩되어 있다. 지금은 간단한 코드라 알아보기 쉬울 수 있지만 복잡한 코드들이 깊게 중첩되어 있다면 코드 가독성이 떨어진다.
 코드를 수정하기도 어려울 것이다. 이를 콜백지옥이라고 말하기도 한다.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3082151336412907"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3082151336412907"
+     data-ad-slot="3525353674"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## promise
 ### promise 개념과 구문
 promise는 어떤 연산 또는 비동기 연산이 최종적으로 성공했는지 실패했는지 알려주는 객체이다. promise를 사용하면 콜백지옥에서 탈출할 수 있다. 
@@ -144,6 +156,18 @@ delayedColorChange('red', 1000)
     .then(() => delayedColorChange('violet', 1000))
 ```
 <br/>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3082151336412907"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3082151336412907"
+     data-ad-slot="3525353674"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 ## 비동기(async), 대기(await) 키워드
 ### 비동기(async)
