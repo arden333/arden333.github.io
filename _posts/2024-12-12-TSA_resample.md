@@ -40,7 +40,7 @@ toc_sticky: true
 
     .output_prompt {
       overflow: auto;
-      font-size: 0.9rem;
+      font-size: 0.5rem;
       line-height: 1.45;
       border-radius: 0.3rem;
       -webkit-overflow-scrolling: touch;
@@ -82,7 +82,7 @@ toc_sticky: true
 ## resample 메서드
 resample() 메서드는 날짜가 인덱스로 지정되어 있을 때, 특정 기간을 묶어 연산을 한다. 일반적인 데이터프레임에서 groupby 연산과 유사하다. 주별, 월별, 연도별 합계, 평균 등을 계산할 때 유용하다. 설정한 기간 간격 중 마지막 날을 기준으로 연산 결과가 출력된다.
 
-
+<br/>
 ```python
 import pandas as pd
 
@@ -99,7 +99,7 @@ df = pd.DataFrame(
 # 날짜정보를 index로 설정
 df = df.set_index('Date')
 ```
-
+<br/>
 
 ```python
 df
@@ -197,18 +197,19 @@ df
 </table>
 </div>
 
-
+<br/>
 
 ```python
 # 인덱스를 datetime index로 설정
 df.index = pd.to_datetime(df.index)
 ```
 
+<br/>
 
 ```python
 df.index
 ```
-
+<br/>
 <pre>
 DatetimeIndex(['2024-01-07', '2024-01-14', '2024-01-21', '2024-01-28',
                '2024-02-04', '2024-02-11', '2024-02-18', '2024-02-25',
@@ -216,7 +217,7 @@ DatetimeIndex(['2024-01-07', '2024-01-14', '2024-01-21', '2024-01-28',
               dtype='datetime64[ns]', name='Date', freq=None)
 </pre>
 
-
+<br/>
 resample 메서드를 이용해 월별 평균값을 구해보자.  
 
 ```python
@@ -272,13 +273,13 @@ df.resample(rule='1m').mean()
 </div>
 
 
-
+<br/>
 월별 평균을 계산하면, 매월 마지막 날을 기준으로 평균값이 들어가있다.
-<br />
+<br/>
 
 rule에 전달할 인수는 별칭(alias)를 사용할 수도 있다. [Pandas의 공식문서](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects)를 확인해보면 빈번히 사용되는 dateoffset이 간단한 약어로 설정되어 있다. 
 
-
+<br/>
 
 ```python
 # 월별 평균
